@@ -6,14 +6,15 @@ import logoLine from '../../assets/logoLine.svg';
 import Image from 'next/image';
 
 // Import spinners and images
-import spinnerImage1 from '../../assets/Spiner With BG.svg';
-import spinnerImage2 from '../../assets/dot.svg';
+
 import cloudwneck01 from '../../assets/cloudwneck01.svg';
 import cloudwneck02 from '../../assets/cloudwneck02.svg';
+import dot from '../../assets/dot.gif';
+import spinnerR from '../../assets/spinnerR.gif'
 
 const spinnersData = [
-  { imageSrc: spinnerImage1, altText: 'Spinner 1', text: "Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.", cloudImageSrc: cloudwneck01 },
-  { imageSrc: spinnerImage2, altText: 'Spinner 2', text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?", cloudImageSrc: cloudwneck02 },
+  { imageSrc: spinnerR, altText: 'Spinner 1', text: "Introducing the Ponder Spinner – where spinning is an art form! Watch as it twirls in a perfect ballet, contemplating the meaning of life while you wait. It's not just a spinner; it's a philosophical journey wrapped in code.", cloudImageSrc: cloudwneck01 },
+  { imageSrc: dot, altText: 'Spinner 2', text: "Meet the Three Dots of Destiny – they’re not just moving up and down, they’re perfecting their vertical dance routine for your entertainment. Watch them groove through loading screens, adding rhythm to your wait. Who knew loading could be this fun?", cloudImageSrc: cloudwneck02 },
   // Add more spinner data
 ];
 
