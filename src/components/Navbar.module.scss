@@ -51,19 +51,27 @@
 
 @media (max-width: 768px) {
   .links {
-    display: none;
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     background-color: $background-colour;
-    position: absolute;
-    top: 5rem;
-    left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none; /* Prevent interactions when menu is not visible */
 
     &.open {
-      display: flex;
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto; /* Allow interactions when menu is visible */
     }
 
     a {
@@ -71,11 +79,44 @@
       padding: 1rem;
       font-size: 1.2rem;
     }
+    
+    .logoContainer {
+      margin-top: auto;
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .logoImage {
+      width: 100%; /* Make sure the image fits within the container */
+      height: auto; /* Maintain aspect ratio */
+    }
   }
 
   .menuToggle {
     display: block;
     color: $primary-brand-colour;
     font-weight: 900;
+  }
+}
+
+/* Add a dark overlay behind the menu when it's open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
   }
 }
