@@ -1,9 +1,12 @@
-// components/Navbar.js
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from '../components/Navbar.module.scss';
 import logosq from '../assets/logosq.png';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className={styles.navbar}>
@@ -15,7 +18,10 @@ export default function Navbar() {
           className={styles.logoImage} 
         />
       </div>
-      <div className={styles.links}>
+      <button className={styles.menuToggle} onClick={toggleMenu}>
+        ☰
+      </button>
+      <div className={`${styles.links} ${isOpen ? styles.open : ''}`}>
         <a href="#working-example">Working Example</a>
         <a href="https://github.com/DBUG-DINGOES/customised-spinners">GitHub</a>
         <a href="https://github.com/DBUG-DINGOES/customised-spinners">Docs</a>

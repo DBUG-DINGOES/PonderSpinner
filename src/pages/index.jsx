@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <h1>test 123</h1>
       <HeroSection />
       <Loaders/>
       <Footer />

@@ -6,6 +6,7 @@
   align-items: center;
   padding: 1rem 5%;
   background-color: $background-colour;
+  position: relative;
 }
 
 .logoContainer {
@@ -20,20 +21,61 @@
 
 .links {
   display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: $background-colour;
+    font-size: 1.1rem;
+    font-weight: $font-weight-medium;
+    background-color: $primary-brand-colour;
+    padding: 15px 50px;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-brand-colour;
+    }
+  }
 }
 
-.links a {
-  margin-left: 1.5rem;
-  text-decoration: none;
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
   color: $background-colour;
-  font-size: 1.1rem;
-  font-weight: $font-weight-medium;
-  background-color: $primary-brand-colour;
-  padding: 15px 50px;
-  border-radius: 2rem;
-  transition: background-color 0.3s ease;
+}
 
-  &:hover {
-    background-color: $secondary-brand-colour;
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: $background-colour;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    &.open {
+      display: flex;
+    }
+
+    a {
+      margin: 1rem 0;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .menuToggle {
+    display: block;
+    color: $primary-brand-colour;
+    font-weight: 900;
   }
 }
