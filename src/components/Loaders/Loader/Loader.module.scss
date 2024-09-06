@@ -57,4 +57,27 @@
   z-index: 3; /* Make sure text is on top */
 }
 
+@media (max-width: 768px) {
+  .spinner {
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+    width: 90%; /* Allow the loader to use more screen width */
+    max-width: 400px; /* Adjust max-width for smaller screens */
+    height: 500px;
+  }
 
+  .imageWrapper {
+    width: 100%;
+    height: 500px; /* Allow height to adjust based on content */
+  }
+
+  .spinnerImage {
+    width: 40%; /* Increase size slightly on smaller screens */
+    top: 45% !important;
+  }
+
+  .spinnerText {
+    margin-top: 1.5rem; /* Adjust as needed */
+    font-size: 0.9rem; /* Smaller font size on mobile */
+    text-align: center; /* Center text */
+  }
+}

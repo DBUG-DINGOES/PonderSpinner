@@ -1,8 +1,8 @@
 @import '../styles/variables';
 
-/* styles/HeroSection.module.scss */
 .hero {
   display: flex;
+  flex-direction: row; /* Default to row layout */
   align-items: center;
   justify-content: space-between;
   padding: 0 5% 4rem;
@@ -45,4 +45,21 @@
 
 .buttonWrapper {
   margin-top: 2rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Change to column layout on small screens */
+    text-align: center; /* Center text alignment on small screens */
+  }
+
+  .heroImg {
+    height: 50vw;
+    margin-top: 2rem;
+  }
+
+  .content {
+    max-width: 90%;
+  }
 }
