@@ -10,7 +10,6 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Loaders />
-      <p>Hello</p>
       <Footer />
     </div>
   );
